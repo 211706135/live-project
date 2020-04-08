@@ -1,4 +1,6 @@
 import numpy
+import time
+import operator
 def delete(arr,c):
     s=0
     if len(arr)==0 :
@@ -12,3 +14,7 @@ def delete(arr,c):
         return '还未添加此记录'
     else:
         return arr
+def sort1(s):
+    result = sorted(s,key=operator.itemgetter(2))
+    for i in range(len(s)):
+        print(result[i],'\n')
